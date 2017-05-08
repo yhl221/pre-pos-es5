@@ -18,7 +18,7 @@ function countSameElements(collection) {
 
 
 function isExist(element, array) {
-  
+
   for (var i = 0; i < array.length; i++) {
     if (element === array[i].name) {
       return array[i];

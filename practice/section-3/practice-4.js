@@ -1,6 +1,7 @@
 'use strict';
 
 function createUpdatedCollection(collectionA, objectB) {
+
   var newArray = buildNewArray(collectionA);
   newArray.forEach(function (element) {
     var is_exist = isExistKey(element.key, objectB.value);
@@ -9,11 +10,14 @@ function createUpdatedCollection(collectionA, objectB) {
       element.count -= number;
     }
   });
+
   return newArray;
 }
 
+
 function buildNewArray(array) {
   var result = [];
+
   for (var i = 0; i < array.length; i++) {
     var newArray = array[i].split("-");
     var getObject = judge(newArray);
@@ -28,14 +32,15 @@ function buildNewArray(array) {
   return result;
 }
 
+
 function isExistKey(element, array) {
   for (var i = 0; i < array.length; i++) {
     if (element === array[i]) {
       return true
     }
   }
-  return false;
 }
+
 
 function isExistObject(element, array) {
   for (var i = 0; i < array.length; i++) {
@@ -43,8 +48,8 @@ function isExistObject(element, array) {
       return array[i];
     }
   }
-  return false;
 }
+
 
 function judge(array) {
   var object = {};

@@ -3,8 +3,7 @@
 function createUpdatedCollection(collectionA, objectB) {
 
   collectionA.forEach(function (element) {
-    var is_exist = isExist(element.key, objectB.value);
-    if (is_exist) {
+    if (isExist(element.key, objectB.value)) {
       element.count--;
     }
   });
@@ -20,5 +19,4 @@ function isExist(element, array) {
       return true;
     }
   }
-  return false;
 }
