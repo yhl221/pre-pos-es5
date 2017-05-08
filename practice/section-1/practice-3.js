@@ -2,16 +2,15 @@
 
 function collectSameElements(collectionA, objectB) {
   var result = [];
+
   collectionA.forEach(function (element) {
-    var is_exist = isExist(element, objectB.value);
-    if (is_exist) {
+    if (isExist(element, objectB.value)) {
       result.push(element);
     }
   });
 
   return result;
 }
-
 
 function isExist(element, array) {
 
@@ -20,6 +19,5 @@ function isExist(element, array) {
       return true;
     }
   }
-  return false;
 }
 
